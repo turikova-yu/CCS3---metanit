@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>METANIT.COM</title>
+    
+    <!-- Ранг селектора :where(h2, #content) будет равен 0, поэтому стиль, задаваемый селектором div > :where(h2, #content) будет переопределен последующими стилями. -->
+    <style>
+        div > :where(h2, #content) { background: red; }
+         
+        div > h2,
+        div > #content {
+            background: white;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <h2>Заголовок</h2>
+    <div id="content">Основное содержимое</div>
+</div>
+</body>
+</html>
